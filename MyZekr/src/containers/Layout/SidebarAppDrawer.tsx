@@ -86,7 +86,8 @@ const SidebarAppDrawer: FC<Props> = ({ settingsLoading, settings, saveSettings }
 			tabIndex={-1}
 			id="sidebar-app-drawer"
 			aria-labelledby="sidebar-app-drawer-title"
-			data-bs-scroll="false"
+			data-bs-scroll="true"
+			data-bs-backdrop="true"
 		>
 			<button
 				id="toggle-sidebar-app-drawer"
@@ -235,6 +236,10 @@ const SidebarAppDrawer: FC<Props> = ({ settingsLoading, settings, saveSettings }
 				<div className="link-item ">
 					<div>رنگ بندی سایت</div>
 					<div className="darkreader color-theme-container">
+						<div
+							onClick={() => applyTheme('system')}
+							className={'color-theme system ' + (themeName === 'system' ? 'selected' : '')}
+						></div>
 						<div
 							onClick={() => applyTheme('default')}
 							className={'color-theme default ' + (themeName === 'default' ? 'selected' : '')}

@@ -18,6 +18,7 @@ interface ZekrBase {
 	zekrTimes?: ZekrTime[];
 	zekrCounts?: ZekrCounter[];
 	showZekrCounter?: boolean;
+	nextRecommendation?: {};
 }
 
 export interface ZekrIndex extends ZekrBase {}
